@@ -1,2 +1,2 @@
 update:
-	curl -O http://curl.haxx.se/ca/cacert.pem
+	cd certifi && curl -O http://curl.haxx.se/ca/cacert.pem

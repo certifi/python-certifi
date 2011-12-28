@@ -4,10 +4,8 @@
 import os
 import sys
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+
+from distutils.core import setup
 
 
 
@@ -18,7 +16,7 @@ if sys.argv[-1] == 'publish':
 required = []
 setup(
     name='certifi',
-    version='0.0.1',
+    version='0.0.2',
     description='Mozilla\'s SSL Certs.',
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
@@ -28,7 +26,8 @@ setup(
         'certifi',
     ],
     # package_dir={'mypkg': 'src/mypkg'},
-    data_files=[('certifi', ['cacert.pem'])],
+    # data_files=[('certifi', ['cacert.pem'])],
+    # package_data = {'certifi'}
     include_package_data=True,
     license='ISC',
     classifiers=(

@@ -4,10 +4,7 @@
 import os
 import sys
 
-
 from distutils.core import setup
-
-
 
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
@@ -16,7 +13,7 @@ if sys.argv[-1] == 'publish':
 required = []
 setup(
     name='certifi',
-    version='0.0.3',
+    version='0.0.4',
     description='Mozilla\'s SSL Certs.',
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
@@ -25,9 +22,9 @@ setup(
     packages=[
         'certifi',
     ],
-    # package_dir={'mypkg': 'src/mypkg'},
-    # data_files=[('certifi', ['cacert.pem'])],
-    # package_data = {'certifi'}
+    package_dir={'certifi': 'certifi'},
+    package_data={'certifi': ['*.pem']},
+    # data_files=[('certifi', ['certifi/cacert.pem'])],
     include_package_data=True,
     license='ISC',
     classifiers=(

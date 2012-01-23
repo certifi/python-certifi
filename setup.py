@@ -13,7 +13,7 @@ if sys.argv[-1] == 'publish':
 required = []
 setup(
     name='certifi',
-    version='0.0.5',
+    version='0.0.7',
     description='Mozilla\'s SSL Certs.',
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
@@ -35,7 +35,7 @@ setup(
         'Programming Language :: Python :: 2.5',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        # 'Programming Language :: Python :: 3.0',
-        # 'Programming Language :: Python :: 3.1',
+        'Programming Language :: Python :: 3.0',
+        'Programming Language :: Python :: 3.1',
     ),
 )

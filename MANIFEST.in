@@ -1,1 +1,1 @@
-include README.rst LICENSE certifi/cacert.pem
+include MANIFEST.in README.rst LICENSE certifi/cacert.pem

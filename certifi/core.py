@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-ceritfi.py
+certifi.py
 ~~~~~~~~~~
 
 This module returns the installation location of cacert.pem.

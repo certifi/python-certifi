@@ -15,6 +15,6 @@ To reference the installed CA Bundle, you can use the built-in function::
     >>> import certifi
 
     >>> certifi.where()
-    'certifi/cacert.pem'
+    '/usr/local/lib/python2.7/site-packages/certifi/cacert.pem'
 
 Enjoy!

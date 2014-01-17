@@ -1,2 +1,2 @@
 update:
-	cd certifi && curl -O http://curl.haxx.se/ca/cacert.pem
+	curl http://ci.kennethreitz.org/job/ca-bundle/lastSuccessfulBuild/artifact/cacerts.pem -o certifi/cacert.pem

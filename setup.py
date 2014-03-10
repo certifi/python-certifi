@@ -13,7 +13,7 @@ if sys.argv[-1] == 'publish':
 required = []
 setup(
     name='certifi',
-    version='1.0.0',
+    version='1.0.1',
     description='Python SSL Certificates',
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',

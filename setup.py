@@ -6,6 +6,8 @@ import sys
 
 from setuptools import setup
 
+VERSION = '14.05.16'
+
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     sys.exit()
@@ -13,8 +15,8 @@ if sys.argv[-1] == 'publish':
 required = []
 setup(
     name='certifi',
-    version='1.0.1',
-    description='Python SSL Certificates',
+    version=version,
+    description='Python package for providing Mozilla\'s CA Bundle.',
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',

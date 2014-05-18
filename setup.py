@@ -15,7 +15,7 @@ if sys.argv[-1] == 'publish':
 required = []
 setup(
     name='certifi',
-    version=version,
+    version=VERSION,
     description='Python package for providing Mozilla\'s CA Bundle.',
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',

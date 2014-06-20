@@ -1,12 +1,16 @@
 Certifi: Python SSL Certificates
 ================================
 
-This installable Python package contains a CA Bundle that you can reference
-in your Python code. This is useful for verifying HTTP requests, for example.
+`Certifi`_ is a carefully curated collection of Root Certificates for
+validating the trustworthiness of SSL certificates while verifying the identity
+of TLS hosts. It has been extracted from the `Requests`_ project.
 
-This is the same CA Bundle which ships with the Requests codebase, and is
-derived from Mozilla Firefox's canonical set.
+Installation
+------------
 
+`certifi` is available on PyPI. Simply install it with `pip`::
+
+    sudo pip install certifi
 
 Usage
 -----
@@ -19,3 +23,6 @@ To reference the installed CA Bundle, you can use the built-in function::
     '/usr/local/lib/python2.7/site-packages/certifi/cacert.pem'
 
 Enjoy!
+
+.. _`Certifi`: http://certifi.io/en/latest/
+.. _`Requests`: http://docs.python-requests.org/en/latest/

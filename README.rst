@@ -10,7 +10,7 @@ Installation
 
 `certifi` is available on PyPI. Simply install it with `pip`::
 
-    sudo pip install certifi
+    $ pip install certifi
 
 Usage
 -----

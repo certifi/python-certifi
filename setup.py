@@ -20,7 +20,7 @@ setup(
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
-    url='http://python-requests.org',
+    url='http://certifi.io/',
     packages=[
         'certifi',
     ],

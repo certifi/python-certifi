@@ -9,7 +9,7 @@ from setuptools import setup
 VERSION = '14.05.14'
 
 if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
+    os.system('python setup.py sdist bdist_wheel upload')
     sys.exit()
 
 required = []

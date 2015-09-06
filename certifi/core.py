@@ -15,5 +15,10 @@ def where():
 
     return os.path.join(f, 'cacert.pem')
 
+
+def old_where():
+    f = os.path.split(__file__)[0]
+    return os.path.join(f, 'weak.pem')
+
 if __name__ == '__main__':
     print(where())

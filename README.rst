@@ -43,5 +43,16 @@ intentionally re-add the 1024-bit roots back into your bundle by calling
 all possible you should upgrade to a newer OpenSSL. However, if you have no
 other option, this may work for you.
 
+
+Windows Certificates store support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On Windows, the CA and ROOT store will be automatically queried for available
+certificates. The result will be appended to the cacert.pem file and put in the
+directory defined in the environment variable APPDATA.
+
+This is done each time the module is loaded.
+
+
 .. _`Certifi`: http://certifi.io/en/latest/
 .. _`Requests`: http://docs.python-requests.org/en/latest/

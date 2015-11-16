@@ -8,6 +8,7 @@ certifi.py
 This module returns the installation location of cacert.pem.
 """
 import os
+import sys
 import warnings
 
 
@@ -17,11 +18,12 @@ class DeprecatedBundleWarning(DeprecationWarning):
     provider to get them to stop using cross-signed roots.
     """
 
-
-def where():
-    f = os.path.split(__file__)[0]
-
-    return os.path.join(f, 'cacert.pem')
+if sys.platform == 'win32':
+    from .win import where
+else:
+    def where():
+        f = os.path.split(__file__)[0]
+        return os.path.join(f, 'cacert.pem')
 
 
 def old_where():

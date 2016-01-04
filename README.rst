@@ -31,7 +31,7 @@ Browsers and certificate authorities have concluded that 1024-bit keys are
 unacceptably weak for certificates, particularly root certificates. For this
 reason, Mozilla has removed any weak (i.e. 1024-bit key) certificate from its
 bundle, replacing it with an equivalent strong (i.e. 2048-bit or greater key)
-certifiate from the same CA. Because Mozilla removed these certificates from
+certificate from the same CA. Because Mozilla removed these certificates from
 its bundle, ``certifi`` removed them as well.
 
 Unfortunately, old versions of OpenSSL (less than 1.0.2) sometimes fail to

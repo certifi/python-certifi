@@ -15,7 +15,8 @@ Installation
 Usage
 -----
 
-To reference the installed CA Bundle, you can use the built-in function::
+To reference the installed certificate authority (CA) bundle, you can use the
+built-in function::
 
     >>> import certifi
 

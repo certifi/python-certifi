@@ -5,6 +5,12 @@ import re
 import os
 import sys
 
+# While I generally consider it an antipattern to try and support both
+# setuptools and distutils with a single setup.py, in this specific instance
+# where packaging is a dependency of setuptools, it can create a circular
+# dependency when projects attempt to unbundle stuff from setuptools and pip.
+# Though we don't really support that, it makes things easier if we do this and
+# should hopefully cause less issues for end users.
 try:
     from setuptools import setup
 except ImportError:

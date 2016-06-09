@@ -5,7 +5,11 @@ import re
 import os
 import sys
 
-from setuptools import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
 
 version_regex = r'__version__ = ["\']([^"\']*)["\']'
 with open('certifi/__init__.py', 'r') as f:

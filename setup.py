@@ -47,6 +47,9 @@ setup(
     package_data={'certifi': ['*.pem']},
     # data_files=[('certifi', ['certifi/cacert.pem'])],
     include_package_data=True,
+    extras_require={
+        ':sys_platform=="win32"': ['wincertstore']
+    },
     license='ISC',
     classifiers=(
         'Development Status :: 5 - Production/Stable',

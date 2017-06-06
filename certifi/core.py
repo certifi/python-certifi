@@ -10,6 +10,8 @@ This module returns the installation location of cacert.pem.
 import os
 import warnings
 
+from . import system
+
 
 class DeprecatedBundleWarning(DeprecationWarning):
     """
@@ -19,9 +21,7 @@ class DeprecatedBundleWarning(DeprecationWarning):
 
 
 def where():
-    f = os.path.split(__file__)[0]
-
-    return os.path.join(f, 'cacert.pem')
+    return system.WHERE
 
 
 def old_where():

@@ -47,6 +47,7 @@ setup(
     package_data={'certifi': ['*.pem']},
     # data_files=[('certifi', ['certifi/cacert.pem'])],
     include_package_data=True,
+    zip_safe=False,
     license='MPL-2.0',
     classifiers=(
         'Development Status :: 5 - Production/Stable',

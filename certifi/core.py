@@ -8,6 +8,8 @@ certifi.py
 This module returns the installation location of cacert.pem.
 """
 import os
+import pkgutil
+import tempfile
 import warnings
 
 
@@ -18,10 +20,24 @@ class DeprecatedBundleWarning(DeprecationWarning):
     """
 
 
-def where():
-    f = os.path.dirname(__file__)
+_certs_tempfile = None
 
-    return os.path.join(f, 'cacert.pem')
+def where():
+    global _certs_tempfile
+    if _certs_tempfile is not None:
+        return _certs_tempfile.name
+
+    f = os.path.dirname(__file__)
+    cert_path = os.path.join(f, 'cacert.pem')
+    if not os.path.exists(cert_path):
+        # assume we are in a zip: attempt to extract to a temp file
+        cert_data = pkgutil.get_data(__package__, 'cacert.pem')
+        _certs_tempfile = tempfile.NamedTemporaryFile(suffix='.pem')
+        _certs_tempfile.write(cert_data)
+        _certs_tempfile.flush()
+        cert_path = _certs_tempfile.name
+
+    return cert_path
 
 
 def old_where():

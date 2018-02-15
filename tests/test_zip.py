@@ -7,8 +7,8 @@ import unittest
 
 _TEST_SCRIPT='; '.join('''import certifi
 import os.path
-assert os.path.exists(certifi.where()), "certs do not exist"
-print "PASS"'''.split('\n'))
+assert os.path.exists(certifi.where()), 'certs do not exist'
+print('PASS')'''.split('\n'))
 
 
 class TestCertifiZip(unittest.TestCase):

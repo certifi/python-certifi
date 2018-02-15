@@ -32,10 +32,11 @@ def where():
     if not os.path.exists(cert_path):
         # assume we are in a zip: attempt to extract to a temp file
         cert_data = pkgutil.get_data(__package__, 'cacert.pem')
-        _certs_tempfile = tempfile.NamedTemporaryFile(suffix='.pem')
-        _certs_tempfile.write(cert_data)
-        _certs_tempfile.flush()
-        cert_path = _certs_tempfile.name
+        f = tempfile.NamedTemporaryFile(suffix='.pem')
+        f.write(cert_data)
+        f.flush()
+        cert_path = f.name
+        _certs_tempfile = f
 
     return cert_path
 

@@ -4,6 +4,8 @@ import subprocess
 import tempfile
 import unittest
 
+import certifi
+
 
 _TEST_SCRIPT='; '.join('''import certifi
 import os.path
@@ -12,6 +14,9 @@ print('PASS')'''.split('\n'))
 
 
 class TestCertifiZip(unittest.TestCase):
+    def test_normal(self):
+        self.assertTrue(os.path.exists(certifi.where()))
+
     def test_egg_zip(self):
         # verifies that certifi works if packaged in an egg
 

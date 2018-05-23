@@ -39,7 +39,7 @@ setup(
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
-    url='http://certifi.io/',
+    url='https://github.com/certifi/python-certifi',
     packages=[
         'certifi',
     ],
@@ -64,4 +64,9 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ),
+    project_urls={
+        'Source Code': 'https://github.com/certifi/python-certifi',
+        'Documentation': 'https://certifiio.readthedocs.io/en/latest/',
+        'Bug Tracker': 'https://github.com/certifi/python-certifi/issues',
+    }
 )

@@ -42,5 +42,5 @@ code, the function ``certifi.old_where()`` continues to exist as an alias of
 ``certifi.where()``. Please update your code to use ``certifi.where()``
 instead. ``certifi.old_where()`` will be removed in 2018.
 
-.. _`Certifi`: http://certifi.io/en/latest/
+.. _`Certifi`: https://certifi.io/en/latest/
 .. _`Requests`: http://docs.python-requests.org/en/latest/

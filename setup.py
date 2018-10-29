@@ -39,7 +39,7 @@ setup(
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
-    url='http://certifi.io/',
+    url='https://certifiio.readthedocs.io/en/latest/',
     packages=[
         'certifi',
     ],

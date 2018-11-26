@@ -37,10 +37,7 @@ its bundle, ``certifi`` removed them as well.
 
 In previous versions, ``certifi`` provided the ``certifi.old_where()`` function
 to intentionally re-add the 1024-bit roots back into your bundle. This was not
-recommended in production and therefore was removed. To assist in migrating old
-code, the function ``certifi.old_where()`` continues to exist as an alias of
-``certifi.where()``. Please update your code to use ``certifi.where()``
-instead. ``certifi.old_where()`` will be removed in 2018.
+recommended in production and therefore was removed at the end of 2018.
 
 .. _`Certifi`: https://certifi.io/en/latest/
 .. _`Requests`: http://docs.python-requests.org/en/latest/

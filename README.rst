@@ -23,6 +23,11 @@ built-in function::
     >>> certifi.where()
     '/usr/local/lib/python2.7/site-packages/certifi/cacert.pem'
 
+Or from the command line::
+
+    $ python -m certifi
+    /usr/local/lib/python2.7/site-packages/certifi/cacert.pem
+
 Enjoy!
 
 1024-bit Root Certificates

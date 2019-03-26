@@ -5,7 +5,22 @@ replacing them with escaped backslashes.
 """
 import sys
 
+def is_python3():
+    """Simple check to distinguist between versions of python.
+
+    It uses a fact, that type 'bytes' in python3 is a built class.
+    In python2 is an alias for type 'str'.
+    """
+    return bytes is not str
+
+encoding = 'utf-8'
+
 for line in sys.stdin:
-    line = line.decode('utf-8')
-    line = line.encode('ascii', errors='backslashreplace')
+    if is_python3():
+        line = bytes(line, encoding)
+        line = line.decode('ascii', errors='backslashreplace')
+    else:
+        line = line.decode(encoding)
+        line = line.encode('ascii', errors='backslashreplace')
+
     sys.stdout.write(line)

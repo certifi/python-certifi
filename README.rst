@@ -28,6 +28,17 @@ Or from the command line::
     $ python -m certifi
     /usr/local/lib/python2.7/site-packages/certifi/cacert.pem
 
+Or when using modules relying certifi and using a custom CA bundle (eg. including internal authority)::
+
+    >>> import certifi
+    >>> import os
+
+    >>> os.environ.get('CERTIFI_CA_BUNDLE')
+    '/etc/ssl/certs/ca-certificates.crt'
+    >>> certifi.where()
+    '/etc/ssl/certs/ca-certificates.crt'
+
+
 Enjoy!
 
 1024-bit Root Certificates

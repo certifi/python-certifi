@@ -48,6 +48,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     license='MPL-2.0',
+    license_files=['LICENSE'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',

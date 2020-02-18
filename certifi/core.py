@@ -17,4 +17,4 @@ def where():
 
 
 def what():
-    return importlib.resources.read_text("certifi", "cacert.pem")
+    return importlib.resources.read_text("certifi", "cacert.pem", encoding="ascii")

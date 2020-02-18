@@ -17,5 +17,4 @@ def where():
 
 
 def what():
-    with importlib.resources.open_binary("certifi", "cacert.pem") as fh:
-        return fh.read()
+    return importlib.resources.read_text("certifi", "cacert.pem")

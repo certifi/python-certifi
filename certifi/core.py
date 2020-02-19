@@ -21,5 +21,5 @@ def where():
     return os.path.join(f, 'cacert.pem')
 
 
-def what():
+def contents():
     return read_text("certifi", "cacert.pem", encoding="ascii")

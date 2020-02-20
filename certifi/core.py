@@ -4,7 +4,7 @@
 certifi.py
 ~~~~~~~~~~
 
-This module returns the installation location of cacert.pem.
+This module returns the installation location of cacert.pem or its contents.
 """
 import os
 

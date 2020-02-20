@@ -22,7 +22,7 @@ except ImportError:
 def where():
     f = os.path.dirname(__file__)
 
-    return os.path.join(f, 'cacert.pem')
+    return os.path.join(f, "cacert.pem")
 
 
 def contents():

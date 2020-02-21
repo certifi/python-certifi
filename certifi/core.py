@@ -16,7 +16,8 @@ except ImportError:
     # so won't address issues with environments like PyOxidizer that don't set
     # __file__ on modules.
     def read_text(_module, _path, encoding="ascii"):
-        return open(where(), "r", encoding=encoding).read()
+        with open(where(), "r", encoding=encoding) as data:
+            return data.read()
 
 
 def where():

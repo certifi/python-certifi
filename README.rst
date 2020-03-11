@@ -45,4 +45,4 @@ to intentionally re-add the 1024-bit roots back into your bundle. This was not
 recommended in production and therefore was removed at the end of 2018.
 
 .. _`Certifi`: https://certifiio.readthedocs.io/en/latest/
-.. _`Requests`: http://docs.python-requests.org/en/latest/
+.. _`Requests`: https://requests.readthedocs.io/en/master/

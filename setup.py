@@ -65,4 +65,8 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8'
     ],
+    project_urls: {
+        'Documentation': 'https://certifiio.readthedocs.io/en/latest/',
+        'Source': 'https://github.com/certifi/python-certifi',
+    },
 )

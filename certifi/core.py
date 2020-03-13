@@ -24,17 +24,6 @@ try:
 except ImportError:
     _HAVE_PKG_RESOURCES = False
 
-try:
-    from importlib.resources import read_text
-except ImportError:
-    # This fallback will work for Python versions prior to 3.7 that lack the
-    # importlib.resources module but relies on the existing `where` function
-    # so won't address issues with environments like PyOxidizer that don't set
-    # __file__ on modules.
-    def read_text(_module, _path, encoding="ascii"):
-        with open(where(), "r", encoding=encoding) as data:
-            return data.read()
-
 _PACKAGE_NAME = "certifi"
 _CACERT_NAME = "cacert.pem"
 
@@ -52,4 +41,5 @@ def contents():
     if _HAVE_RESOURCE_READER:
         return importlib.resources.read_text(_PACKAGE_NAME, _CACERT_NAME, encoding="ascii")
     else:
-        return read_text(_PACKAGE_NAME, _CACERT_NAME, encoding="ascii")
+        with open(where(), "r", encoding="ascii") as data:
+            return data.read()

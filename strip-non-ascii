@@ -5,7 +5,7 @@ replacing them with escaped backslashes.
 """
 import sys
 
-for line in sys.stdin:
+for line in sys.stdin.buffer:
     line = line.decode('utf-8')
     line = line.encode('ascii', errors='backslashreplace')
-    sys.stdout.write(line)
+    sys.stdout.buffer.write(line)

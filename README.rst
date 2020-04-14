@@ -37,7 +37,7 @@ Certify does not support any addition/removal or other modification of the
 CA trust store content. This project is intended to provide a reliable and
 highly portable root of trust to python deployments.
 
-Look to upstream projects using Certify, or methods to use alternate trust
+Look to upstream projects using Certify for methods to use alternate trust
 stores. For `Requests`_, this can be accomplished with the
 ``REQUESTS_CA_BUNDLE`` or ``CURL_CA_BUNDLE`` environment variables.
 

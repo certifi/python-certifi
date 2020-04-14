@@ -46,3 +46,11 @@ recommended in production and therefore was removed at the end of 2018.
 
 .. _`Certifi`: https://certifiio.readthedocs.io/en/latest/
 .. _`Requests`: https://requests.readthedocs.io/en/master/
+
+Addition/Removal of Certificates
+--------------------------------
+
+Certifi does not support any addition/removal or other modification of the
+CA trust store content. This project is intended to provide a reliable and
+highly portable root of trust to python deployments. Look to upstream projects
+for methods to use alternate trust.

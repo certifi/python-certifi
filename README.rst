@@ -1,7 +1,7 @@
 Certifi: Python SSL Certificates
 ================================
 
-`Certifi`_ is a carefully curated collection of Root Certificates for
+`Certifi`_ provides Mozilla's carefully curated collection of Root Certificates for
 validating the trustworthiness of SSL certificates while verifying the identity
 of TLS hosts. It has been extracted from the `Requests`_ project.
 

@@ -1,2 +1,0 @@
-# certify.tests module
-

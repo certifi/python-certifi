@@ -1,7 +1,7 @@
 Certifi: Python SSL Certificates
 ================================
 
-`Certifi`_ provides Mozilla's carefully curated collection of Root Certificates for
+Certifi provides Mozilla's carefully curated collection of Root Certificates for
 validating the trustworthiness of SSL certificates while verifying the identity
 of TLS hosts. It has been extracted from the `Requests`_ project.
 
@@ -44,7 +44,6 @@ In previous versions, ``certifi`` provided the ``certifi.old_where()`` function
 to intentionally re-add the 1024-bit roots back into your bundle. This was not
 recommended in production and therefore was removed at the end of 2018.
 
-.. _`Certifi`: https://certifiio.readthedocs.io/en/latest/
 .. _`Requests`: https://requests.readthedocs.io/en/master/
 
 Addition/Removal of Certificates

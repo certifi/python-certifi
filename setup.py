@@ -48,7 +48,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     license='MPL-2.0',
-    python_requires=">=3.3",
+    python_requires=">=3.5",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',

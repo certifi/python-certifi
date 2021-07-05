@@ -45,8 +45,13 @@ except ImportError:
     # so won't address issues with environments like PyOxidizer that don't set
     # __file__ on modules.
     def read_text(_module, _path, encoding="ascii"):
-        with open(where(), "r", encoding=encoding) as data:
-            return data.read()
+        try:
+            with open(where(), "r", encoding=encoding) as data:
+                return data.read()
+        except TypeError:
+            # Read under Python2.7
+            with open(where(), "r") as data:
+                return data.read()
 
     # If we don't have importlib.resources, then we will just do the old logic
     # of assuming we're on the filesystem and munge the path directly.

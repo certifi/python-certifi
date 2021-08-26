@@ -43,7 +43,7 @@ setup(
         'certifi',
     ],
     package_dir={'certifi': 'certifi'},
-    package_data={'certifi': ['*.pem']},
+    package_data={'certifi': ['*.pem', 'py.typed']},
     # data_files=[('certifi', ['certifi/cacert.pem'])],
     include_package_data=True,
     zip_safe=False,

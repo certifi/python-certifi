@@ -21,12 +21,12 @@ built-in function::
     >>> import certifi
 
     >>> certifi.where()
-    '/usr/local/lib/python3.7/site-packages/certifi/cacert.pem'
+    '/usr/local/lib/python3.9/site-packages/certifi/cacert.pem'
 
 Or from the command line::
 
     $ python -m certifi
-    /usr/local/lib/python3.7/site-packages/certifi/cacert.pem
+    /usr/local/lib/python3.9/site-packages/certifi/cacert.pem
 
 Enjoy!
 

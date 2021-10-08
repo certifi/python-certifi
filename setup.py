@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-from __future__ import with_statement
 import re
 import os
 import sys
@@ -18,7 +16,7 @@ except ImportError:
 
 
 version_regex = r'__version__ = ["\']([^"\']*)["\']'
-with open('certifi/__init__.py', 'r') as f:
+with open('certifi/__init__.py') as f:
     text = f.read()
     match = re.search(version_regex, text)
 

@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import with_statement
 import re
-import os
-import sys
 
 # While I generally consider it an antipattern to try and support both
 # setuptools and distutils with a single setup.py, in this specific instance
@@ -26,10 +24,6 @@ with open('certifi/__init__.py', 'r') as f:
         VERSION = match.group(1)
     else:
         raise RuntimeError("No version number found!")
-
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist bdist_wheel upload')
-    sys.exit()
 
 setup(
     name='certifi',

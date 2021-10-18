@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import with_statement
-import re
 import os
 import sys
 
@@ -17,23 +16,12 @@ except ImportError:
     from distutils.core import setup
 
 
-version_regex = r'__version__ = ["\']([^"\']*)["\']'
-with open('certifi/__init__.py', 'r') as f:
-    text = f.read()
-    match = re.search(version_regex, text)
-
-    if match:
-        VERSION = match.group(1)
-    else:
-        raise RuntimeError("No version number found!")
-
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist bdist_wheel upload')
     sys.exit()
 
 setup(
     name='certifi',
-    version=VERSION,
     description='Python package for providing Mozilla\'s CA Bundle.',
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',

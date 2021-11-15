@@ -36,12 +36,12 @@ setup(
     long_description=open('README.rst').read(),
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
-    url='https://certifiio.readthedocs.io/en/latest/',
+    url='https://github.com/certifi/python-certifi',
     packages=[
         'certifi',
     ],
     package_dir={'certifi': 'certifi'},
-    package_data={'certifi': ['*.pem']},
+    package_data={'certifi': ['*.pem', 'py.typed']},
     # data_files=[('certifi', ['certifi/cacert.pem'])],
     include_package_data=True,
     zip_safe=False,
@@ -61,7 +61,6 @@ setup(
         'Programming Language :: Python :: 3.10',
     ],
     project_urls={
-        'Documentation': 'https://certifiio.readthedocs.io/en/latest/',
         'Source': 'https://github.com/certifi/python-certifi',
     },
 )

@@ -6,6 +6,18 @@ on:
   pull_request: {}
 
 jobs:
+  mypy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install dependencies
+        run: pip install mypy
+      - name: Run mypy
+        run: mypy --strict certifi
+
   test:
     runs-on: ubuntu-latest
     strategy:

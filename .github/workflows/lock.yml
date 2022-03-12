@@ -1,0 +1,19 @@
+name: Lock Issues
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  issues: "write"
+
+jobs:
+  lock:
+    if: github.repository_owner == 'certifi'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dessant/lock-threads@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-inactive-days: 90
+          pr-inactive-days: 90

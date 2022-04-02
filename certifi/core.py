@@ -11,7 +11,8 @@ import types
 from typing import Union
 
 try:
-    from importlib.resources import path as get_path, read_text
+    from importlib.resources import path as get_path
+    from importlib.resources import read_text
 
     _CACERT_CTX = None
     _CACERT_PATH = None

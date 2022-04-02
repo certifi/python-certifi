@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import with_statement
-import re
+
 import os
+import re
 import sys
 
 # While I generally consider it an antipattern to try and support both

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 certifi.py
 ~~~~~~~~~~
@@ -55,7 +53,7 @@ except ImportError:
         encoding: str = 'utf-8',
         errors: str = 'strict'
     ) -> str:
-        with open(where(), "r", encoding=encoding) as data:
+        with open(where(), encoding=encoding) as data:
             return data.read()
 
     # If we don't have importlib.resources, then we will just do the old logic

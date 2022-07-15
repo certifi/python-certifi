@@ -103,3 +103,6 @@ else:
         f = os.path.dirname(__file__)
 
         return os.path.join(f, "cacert.pem")
+
+    def contents() -> str:
+        return read_text("certifi", "cacert.pem", encoding="ascii")

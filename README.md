@@ -1,19 +1,16 @@
-Certifi: Python SSL Certificates
-================================
+<h1 align="center">Certifi: Python SSL Certificates</h1>
 
-Certifi provides Mozilla's carefully curated collection of Root Certificates for
-validating the trustworthiness of SSL certificates while verifying the identity
-of TLS hosts. It has been extracted from the `Requests`_ project.
+-    Certifi provides Mozilla's carefully curated collection of Root Certificates for
+    validating the trustworthiness of SSL certificates while verifying the identity
+    of TLS hosts. It has been extracted from the `Requests`_ project.
 
-Installation
-------------
+<h1 align="center">Installation</h1>
 
-``certifi`` is available on PyPI. Simply install it with ``pip``::
+ ``certifi`` is available on PyPI. Simply install it with ``pip``::
 
     $ pip install certifi
 
-Usage
------
+<h1 align="center">Usage</h1>
 
 To reference the installed certificate authority (CA) bundle, you can use the
 built-in function::

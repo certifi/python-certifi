@@ -7,7 +7,7 @@ This module returns the installation location of cacert.pem or its contents.
 import sys
 
 
-if sys.version_info >= (3, 9):
+if sys.version_info >= (3, 11):
 
     from importlib.resources import as_file, files
 

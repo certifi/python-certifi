@@ -4,13 +4,14 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
-permissions:
-  issues: "write"
+permissions: {}
 
 jobs:
   lock:
     if: github.repository_owner == 'certifi'
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: dessant/lock-threads@v3
         with:

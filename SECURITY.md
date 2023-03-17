@@ -1,7 +1,7 @@
 # Reporting Security Issues
 
-To report a security issue, please email
-[example@email.com](mailto:example@email.com)
+To report a security issue, please email [alex.gaynor@gmail.com](mailto:alex.gaynor@gmail.com) or
+[lukasaoz@gmail.com](mailto:lukasaoz@gmail.com)
 with a description of the issue, the steps you took to create the issue,
 affected versions, and, if known, mitigations for the issue.
 

@@ -16,7 +16,7 @@ jobs:
       - name: Update date
         id: update-date
         run: |
-          if $(git diff --quiet certifi/cacert.pem)); then
+          if ! git diff --quiet certifi/cacert.pem ; then
             DATE=$(date +"%Y.%m.%d")
             sed -E -i "s/__version__ = .*/__version__ = \"${DATE}\"/" certifi/__init__.py
             echo "DATE=${DATE}" >> $GITHUB_OUTPUT

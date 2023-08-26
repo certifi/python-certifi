@@ -1,0 +1,31 @@
+name: Bump cacert.pem
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run daily
+    - cron: "0 0 * * *"
+
+jobs:
+  bump:
+    if: github.repository_owner == 'pyca'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
+      - run: make update
+      - name: Update date
+        id: update-date
+        run: |
+          if $(git diff --quiet certifi/cacert.pem)); then
+            DATE=$(date +"%Y.%m.%d")
+            sed -E -i "s/__version__ = .*/__version__ = \"${DATE}\"/" certifi/__init__.py
+            echo "DATE=${DATE}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # v5.0.2
+        with:
+          commit-message: "${{ steps.update-date.outputs.DATE }}"
+          title: "${{ steps.update-date.outputs.DATE }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.update-date.outputs.DATE

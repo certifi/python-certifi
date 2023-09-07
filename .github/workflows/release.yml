@@ -6,6 +6,9 @@ on:
 
 name: release
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build distributions for PyPI

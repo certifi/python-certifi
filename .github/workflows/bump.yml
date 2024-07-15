@@ -35,3 +35,6 @@ jobs:
           title: "${{ steps.update-date.outputs.DATE }}"
           token: ${{ secrets.GITHUB_TOKEN }}
         if: steps.update-date.outputs.DATE
+name : operations/ps
+commiting message = repository")
+}])

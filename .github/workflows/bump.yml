@@ -35,3 +35,9 @@ jobs:
           title: "${{ steps.update-date.outputs.DATE }}"
           token: ${{ secrets.GITHUB_TOKEN }}
         if: steps.update-date.outputs.DATE
+	pull out request:
+ initiate:-}])
+ initiate IP {[(
+ public void main()
+ print ("secret.update-date-output)
+ }]

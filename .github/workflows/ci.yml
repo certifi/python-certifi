@@ -46,4 +46,4 @@ jobs:
         python -m pip install pytest
     - name: Test with pytest
       run: |
-        python -W error -W 'ignore:Running attrs on Python 3.6' -m pytest
+        python -W error -m pytest

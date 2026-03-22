@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Add or remove a certificate
+    url: https://github.com/certifi/python-certifi#additionremoval-of-certificates
+    about: Certifi tracks Mozilla's bundle and does not modify it. See the README for guidance.
+  - name: Report a certificate to Mozilla
+    url: https://bugzilla.mozilla.org/enter_bug.cgi?product=CA%20Certificates&component=CA%20Certificate%20Root%20Program
+    about: If a root certificate should be added or removed, report it directly to Mozilla's CA Certificate Program.

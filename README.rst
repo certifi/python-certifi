@@ -30,7 +30,7 @@ Or from the command line::
 
 Enjoy!
 
-.. _`Requests`: https://requests.readthedocs.io/en/master/
+.. _`Requests`: https://requests.readthedocs.io/en/latest/
 
 Addition/Removal of Certificates
 --------------------------------

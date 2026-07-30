@@ -1,0 +1,9 @@
+Copyright (c) Certifi Developers and contributors.
+See the repository history for individual contribution copyrights.
+
+The CA certificate bundle is derived from Mozilla's CA certificate store
+and is covered by the Mozilla Public License 2.0 (see LICENSE).
+
+The Python packaging of this project is released under the same terms as
+documented in LICENSE / MPL-2.0 as applicable to the bundled data and the
+MIT-style terms historically used for the Python module (see project history).

@@ -39,3 +39,9 @@ Certifi does not support any addition/removal or other modification of the
 CA trust store content. This project is intended to provide a reliable and
 highly portable root of trust to python deployments. Look to upstream projects
 for methods to use alternate trust.
+
+Copyright
+---------
+
+See ``COPYRIGHT`` and ``LICENSE`` for copyright and licensing information
+(issue #188).

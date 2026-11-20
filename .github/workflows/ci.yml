@@ -48,4 +48,4 @@ jobs:
         python -m pip install pytest
     - name: Test with pytest
       run: |
-        python -W error -m pytest
+        python -m pytest -W error
